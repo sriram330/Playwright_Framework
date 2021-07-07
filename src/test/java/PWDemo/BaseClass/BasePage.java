@@ -20,7 +20,7 @@ public class BasePage {
         browser = Playwright
                 .create()
                 .chromium()
-                .launch(new BrowserType.LaunchOptions().setHeadless(false));
+                .launch(new BrowserType.LaunchOptions());
 
         page = browser.newPage();
         //page.navigate("https://codoid.com/");
@@ -32,6 +32,4 @@ public class BasePage {
     static void browserClose(){
         browser.close();
     }
-
-
 }
